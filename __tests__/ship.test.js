@@ -21,9 +21,10 @@ describe("Ship object",()=>{
         expect(myShip).hasOwnProperty("currentPort");
     })
 
-    xit("should set sail",()=>{
+    it("should set sail",()=>{
         myShip.setSail();
         expect(myShip.currentPort).toBeFalsy();
+        expect(myShip.previousPort).toEqual(dover);
     })
 
     it("should take Port object as parameter",()=>{
@@ -39,4 +40,5 @@ describe("Ship object",()=>{
         myShip.dock(calais);
         expect(myShip.currentPort).toEqual(calais);
     })
+
 })
